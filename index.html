@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-secondary"> <!-- this is the background color of the page -->
+    <div id="header" class="container text-center p-3"> <!-- this is the header of the page -->
+        <div class="row"> <!-- this is the fist row of the header -->
+            <div class="col pt-2"></div> <!-- this is the first column of the header -->
+            <div class="col pt-2"> <!-- this is the second column of the header -->
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkp_mMqzZouHEb6stvPZnHwA5JF8o7j7PNMCkjbU0Eag&s&ec=72940542" alt="Promineo Tech" width="90"> <!-- this is the link to our promineotech logo-->
+            </div>
+            <div class="col pt-2"></div> <!-- this is the third column of the header -->
+        </div>
+        <div class="row pt-2"></div> <!-- this is the second row of the header -->
+        <div class="row pt-2"> <!-- this is the third row of the header -->
+            <div class="col"> <!-- this is the first column of the header for the title -->
+                <h1 class="m-3">Tic-Tac-Toe</h1> <!-- this is the title of the page -->
+            </div>
+        </div>
+
+        <div class="row pt-2"> <!-- this is the fourth row of the header -->
+            <div id='p1' class="col fs-2">Player 1 - X</div> <!-- this is the first column of the header for player 1 -->
+            <div class="col fs-2"></div> <!-- this is the second column of the header for the score -->
+            <div id='p2' class="col fs-2">Player 2 - O</div> <!-- this is the third column of the header for player 2 -->
+</div>
+
+<!-- ALERT POP-UP -->
+
+<div id="alert--container"> <!--this is the alert pop-up container-->
+
+
+<div id="alertStart" class="alert alert-info text-center w-25 mx-auto fs-3" role="alert"> <!-- This is the alert pop-up for the current player to start the game -->
+    Player 1 Start!
+</div> 
+<div id="alertWinner" class="alert alert-info text-center w-25 mx-auto fs-3" role="alert"> <!-- This is the alert pop-up for the winner of the game -->
+    Player <span id="winner"></span> wins!
+    
+</div>
+<div id="alertDraw" class="alert alert-info text-center w-25 mx-auto fs-3" role="alert"> <!-- This is the alert pop-up for the draw of the game -->
+    GAME OVER! It's a draw!
+</div>
+
+</div>
+<!-- GRID -->
+<div class="container m-auto p-3 g-5"> <!-- this is the grid container for showing the game board -->
+    <div id="grid" class="container-outline-light m-auto p-0 bg-dark text-info text-center align-middle border border-info">
+        <div class="row fs-1 g-0">
+            <div id="box0" class="box col p-3 border border-info"></div> <!-- each of these lines is a box in the grid so, we have 9 boxes in total, so we have lines 0 to 8 -->
+            <div id="box1" class="box col p-3 border border-info"></div>
+            <div id="box2" class="box col p-3 border border-info"></div>
+        </div>
+        <div class="row fs-1 g-0">
+            <div id="box3" class="box col p-3 border border-info"></div>
+            <div id="box4" class="box col p-3 border border-info"></div>
+            <div id="box5" class="box col p-3 border border-info"></div>
+        </div>
+        <div class="row fs-1 g-0">
+            <div id="box6" class="box col p-3 border border-info"></div>
+            <div id="box7" class="box col p-3 border border-info"></div>
+            <div id="box8" class="box col p-3 border border-info"></div>
+        </div>
+    </div>
+</div>
+
+
+<!-- BUTTONS -->
+
+<div class=" d-grid col-3 gap-3 mx-auto pt-4"></div> <!-- this is the button container for the start and reset buttons -->
+    <button id="startBtn" type="button" class="btn  btn-lgbtn-outline-info">Start</button> <!-- this is the start button for the game -->
+    <button id="resetBtn" type="button" class="btn btn-outline-dark btn-lg">Reset</button> <!-- this is the reset button for the game -->
+</div>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script> <!-- I have my bootstrap js file here, so I can use the bootstrap features -->
+    <script src="node_modules/jquery/dist/jquery.js"></script> <!-- I have my jquery file here, so I can use the jquery features -->
+    <script src="index.js"></script> <!-- and then i also linked my index.js file here, so I can use the javascript features -->
+</body>
+</html>
